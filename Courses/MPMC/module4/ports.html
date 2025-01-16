@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VInTogether</title>
+    <link rel="stylesheet" href="../../../styles/style.css">
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon">
+</head>
+</head>
+<body>
+    <div class="main-contr">
+        <div class="tree-contr">
+
+        </div>
+        <div class="content-contr">
+
+            <div class="sub-topic-div">
+                <h1 class="sub-topic-heading">I/O ports</h1>
+                <p class="sub-topic-intro"></p>
+                
+                <div class="videos-contr">
+                    <iframe width="400" height="300" src="https://www.youtube.com/embed/m3riF4rY8Hg" title="IO Ports of 8051 Microcontroller: Detailed Working and Configurations Explained | 8051" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                </div>
+
+                <div class="notes">
+                    <h3>Points to remember:</h3>
+                    <ul>
+                        <li>never forget to move FFH to input port through accumulator(this indicates that the particular port is input port) </li>
+                        <li>learn how to use JB and JNB and SETB and CLR  commands in the code (it is particularly important in port programming) </li>
+                        <li>we can’t move a single bit directly from one port bit to other port bit(for example MOV P2.7,P1.0 this is wrong You need to use carry to move single bit data MOV C,P2.7 MOV P1.0,C this is correct representation) 
+
+                            But you can move BYTE data from one port to other directly (MOV P2,P1 is correct) 
+                            
+                              </li>
+
+                    </ul>
+                </div>
+
+                <div class="remarks">
+                    <h3>Types of Questions:</h3>
+                    <ul>
+                        <li>this is the part where you can expect logic based programming questions where you have calculate the area, perimeter of the rectangle or you have to solve the expression or questions like that </li>
+                        <li>in the question they sometimes directly mention what are the input ports and what are the output ports (if they don't give directly if you read question thoroughly you will get to know ) </li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="../../../scripts/include-tree.js"></script>
+    <script>includeTree("../tree.html")</script>
+</body>
+</html>

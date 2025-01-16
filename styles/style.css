@@ -1,0 +1,585 @@
+/* General Reset */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f3e9; /* Light beige background */
+    color: #4b3b2d; /* Dark brown text */
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4b3b2d;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .logo img {
+    height: 40px;
+    margin-right: 10px;
+}
+
+.navbar .logo span {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar .navbar-links a {
+    margin-left: 20px;
+    color: white;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+.navbar .navbar-links a:hover {
+    color: #f0a500;
+}
+
+
+/* Main Container */
+.main-contr {
+    display: flex;
+    padding: 10px;
+    gap: 10px;
+}
+
+/* Tree Container */
+.tree-contr {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    background-color: #e6d9c3; /* Light brown */
+    border: 1px solid #8b7765; /* Medium brown */
+    border-radius: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+}
+
+/* Content Container */
+.content-contr {
+    flex: 4;
+    padding: 15px;
+    margin: 5px;
+    background-color: #fffaf0; /* Very light beige */
+    border: 1px solid #8b7765; /* Medium brown */
+    border-radius: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: 95vh;
+}
+
+/* Sub-topic Section */
+.sub-topic-div {
+    padding: 10px;
+    background-color: #f4ead8; /* Subtle beige */
+    border: 1px solid #d2b48c; /* Tan */
+    border-radius: 0.5em;
+}
+
+h1 {
+    margin: 0.3em 0em;
+    color: #4b3b2d; /* Dark brown */
+}
+
+h3 {
+    margin: 0.3em 0.2em;
+    color: #6a5a4d; /* Softer brown */
+}
+
+p {
+    margin: 0.3em 0em;
+    line-height: 1.6;
+    color: #4b3b2d; /* Dark brown */
+}
+
+/* Videos Section */
+.videos-contr {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    row-gap: 2rem;
+    column-gap: 2rem;
+    margin: 1.5rem 0rem;
+}
+
+iframe {
+    border: 1px solid #d2b48c; /* Tan */
+    border-radius: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Notes and Remarks */
+.notes, .remarks {
+    padding: 1em;
+    margin-top: 1em;
+    background-color: #fffaf0; /* Very light beige */
+    border: 1px solid #d2b48c; /* Tan */
+    border-radius: 0.5em;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.notes h3 {
+    margin-top: 0;
+}
+
+/* List Styling */
+ul {
+    padding-left: 1.5em;
+}
+
+li {
+    margin: 0.5em 0;
+    color: #4b3b2d; /* Dark brown */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-contr {
+        flex-direction: column;
+    }
+
+    .tree-contr {
+        flex: unset;
+    }
+
+    .content-contr {
+        flex: unset;
+    }
+}
+
+.feedback-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.feedback-form label {
+    font-weight: bold;
+    color: #4b3b2d; /* Dark brown */
+}
+
+.feedback-form input, .feedback-form textarea {
+    padding: 0.5em;
+    border: 1px solid #d2b48c; /* Tan */
+    border-radius: 0.5em;
+    background-color: #fffaf0; /* Very light beige */
+    color: #4b3b2d; /* Dark brown */
+    font-size: 1em;
+    resize: none;
+}
+
+.feedback-form input:focus, .feedback-form textarea:focus {
+    outline: none;
+    border-color: #8b7765; /* Medium brown */
+    background-color: #f7f3e9; /* Light beige focus effect */
+}
+
+.feedback-form button {
+    align-self: flex-start;
+}
+
+/* Tree Styling */
+.tree-contr ul {
+    list-style-type: none; /* Remove bullets */
+    padding-left: 0; /* Remove default padding */
+    margin: 0;
+}
+
+.tree-contr ul li {
+    margin: 0.5em 0;
+    padding: 0.3em 0.5em;
+    background-color: #f4ead8; /* Subtle beige for list item background */
+    border: 1px solid #d2b48c; /* Tan border for list items */
+    border-radius: 0.3em;
+    transition: background-color 0.3s, transform 0.2s, color 0.3s;
+}
+
+.tree-contr ul li:hover {
+    background-color: #ffffff; /* White background on hover */
+    transform: translateX(2px); /* Subtle slide effect */
+}
+
+.tree-contr ul li a {
+    text-decoration: none; /* Remove underline */
+    color: #4b3b2d; /* Dark brown for links */
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.tree-contr ul li:hover a {
+    color: #6a5a4d; /* Softer brown link color on hover */
+}
+
+.tree-contr span {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #6a5a4d; /* Softer brown for module names */
+    margin-bottom: 0.5em;
+    display: inline-block;
+}
+
+.tree-contr h3 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #4b3b2d; /* Dark brown for the title */
+    margin-bottom: 1em;
+}
+
+/* Add a subtle border to the entire tree container */
+.tree-contr {
+    border-left: 4px solid #d2b48c; /* Tan border for emphasis */
+}
+
+/* Adjust margin and padding for better spacing */
+.tree-contr ul ul {
+    margin-left: 1.5em; /* Indent nested lists */
+    padding-left: 0;
+}
+
+.subject-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Feedback Button Styling */
+.feedback-button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+}
+
+.feedback-button {
+    background-color: #8b7765; /* Medium brown */
+    color: #fff;
+    padding: 0.8em 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-button:hover {
+    background-color: #4b3b2d; /* Darker brown */
+}
+
+/* Cards Layout */
+.subject-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    display: flex;
+    background-color: #f5e8d3; /* Light beige */
+    border: 1px solid #d2b48c; /* Tan */
+    border-radius: 0.5em;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-right: 1px solid #d2b48c; /* Border between image and text */
+}
+
+.card-content {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    color: #4b3b2d; /* Dark brown */
+}
+
+.card-content p {
+    margin: 0 0 1rem;
+    color: #4b3b2d; /* Dark brown */
+}
+
+.start-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #8b7765; /* Medium brown */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #4b3b2d; /* Darker brown */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Header and Feedback Button Alignment */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 2rem;
+    color: #4b3b2d; /* Dark brown */
+}
+
+.header-text p {
+    margin: 0.5rem 0 0;
+    color: #4b3b2d; /* Dark brown */
+}
+
+.feedback-button-container {
+    margin-left: 1rem;
+}
+
+.feedback-button {
+    background-color: #8b7765; /* Medium brown */
+    color: #fff;
+    padding: 0.8em 1.2em;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-button:hover {
+    background-color: #4b3b2d; /* Darker brown */
+}
+
+/* Cards Layout */
+.subject-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.card {
+    display: flex;
+    background-color: #f5e8d3; /* Light beige */
+    border: 1px solid #d2b48c; /* Tan */
+    border-radius: 0.5em;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card img {
+    width: 120px;
+    height: auto;
+    object-fit: cover;
+    border-right: 1px solid #d2b48c; /* Border between image and text */
+}
+
+.card-content {
+    padding: 1rem;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin: 0 0 0.5rem;
+    font-size: 1.5rem;
+    color: #4b3b2d; /* Dark brown */
+}
+
+.card-content p {
+    margin: 0 0 1rem;
+    color: #4b3b2d; /* Dark brown */
+}
+
+.start-button {
+    display: inline-block;
+    padding: 0.5em 1em;
+    background-color: #8b7765; /* Medium brown */
+    color: #fff;
+    text-decoration: none;
+    border-radius: 0.5em;
+    transition: background-color 0.3s ease;
+}
+
+.start-button:hover {
+    background-color: #4b3b2d; /* Darker brown */
+}
+
+/* Card Hover Effect */
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* General Reset for Mobile Responsiveness */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f3e9;
+    color: #4b3b2d;
+    overflow-x: hidden; /* Prevent horizontal scrolling on small screens */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    /* Navbar adjustments */
+    .navbar {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .navbar .logo {
+        justify-content: center;
+        margin-bottom: 10px;
+    }
+
+    .navbar .navbar-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar .navbar-links a {
+        margin-left: 0;
+        font-size: 16px;
+    }
+
+    /* Feedback Form Adjustments */
+    .feedback-form {
+        padding: 10px;
+    }
+
+    .feedback-form input,
+    .feedback-form textarea {
+        font-size: 0.9em;
+    }
+
+    /* Feedback Button Adjustments */
+    .feedback-button-container {
+        justify-content: center;
+    }
+
+    .feedback-button {
+        font-size: 0.9em;
+        padding: 0.6em 1em;
+    }
+
+    /* Cards Layout */
+    .subject-cards {
+        grid-template-columns: 1fr; /* Single column layout for smaller screens */
+        gap: 1.5rem;
+    }
+
+    .card {
+        flex-direction: column; /* Stack image and content */
+        text-align: center;
+    }
+
+    .card img {
+        width: 100%; /* Image spans the card's width */
+        height: auto; /* Maintain aspect ratio */
+        border-right: none; /* Remove border since image is on top */
+        border-bottom: 1px solid #d2b48c; /* Add bottom border for separation */
+    }
+
+    .card-content {
+        padding: 1rem;
+    }
+
+    .start-button {
+        padding: 0.4em 0.8em;
+        font-size: 0.9em;
+    }
+
+    /* Feedback Form Buttons */
+    .feedback-form button {
+        padding: 0.6em 1em;
+        font-size: 0.9em;
+    }
+}
+
+/* Extra Small Devices (max-width: 480px) */
+@media (max-width: 480px) {
+    .navbar .logo span {
+        font-size: 20px;
+    }
+
+    .navbar .navbar-links a {
+        font-size: 14px;
+    }
+
+    .card-content h3 {
+        font-size: 1.2rem;
+    }
+
+    .card-content p {
+        font-size: 0.9rem;
+    }
+
+    .feedback-button {
+        padding: 0.5em 0.8em;
+        font-size: 0.85em;
+    }
+
+    .start-button {
+        font-size: 0.85em;
+        padding: 0.4em 0.6em;
+    }
+}
+
+
+/* General Styles */
+.tree-contr {
+    display: block; /* Default for larger screens */
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    max-height: none;
+}
+
+/* Navbar styling */
+.tree-navbar {
+    width: 100%;
+    background-color: #8b7765; /* Requested brownish color */
+    color: white;
+    text-align: center;
+    padding: 0.8em 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Adds slight shadow */
+    position: sticky; /* Sticks to the top of the page when scrolling */
+    top: 0;
+    z-index: 1000;
+}
+
+.tree-navbar-link {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.tree-navbar-link:hover {
+    color: #f4ecd8; /* Light beige on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}

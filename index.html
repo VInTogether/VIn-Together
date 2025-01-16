@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIn Together - VIT Courses</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #8b7765;
+            color: #fff;
+            text-decoration: none;
+            padding-right: 200px;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+        .navbar ul li a {
+        text-decoration: none; /* Ensure the text is not underlined */
+        color: #fff;
+        font-size: 1em;
+        }
+
+        .navbar ul li a:hover {
+        text-decoration: none; /* Prevent underline on hover */
+        color: #ccc; /* Optional: Add a hover effect for color */
+        }
+
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1em;
+            
+        }
+
+        .navbar .navbar-links {
+        display: flex;
+        gap: 20px;/* Spacing between links */
+         
+        }
+
+.navbar .navbar-links a {
+    text-decoration: none; /* Remove underline */
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s; /* Smooth hover effect */
+}
+
+.navbar .navbar-links a:hover {
+    color: #ccc; /* Light gray on hover */
+}
+
+        .section {
+            padding: 20px;
+        }
+
+        .feedback-section {
+            background-color: #e6d9c3;
+            padding: 40px 20px;
+            border-radius: 12px;
+            max-width: 600px;
+            margin: 20px auto;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .feedback-section h1 {
+            text-align: center;
+        }
+
+        .feedback-section form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .feedback-section textarea {
+            width: 95%;
+            padding: 12px;
+            border: 1px solid #8b7765;
+            border-radius: 6px;
+            margin-bottom: 20px;
+        }
+
+        .feedback-section button {
+            background-color: #8b7765;
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        .feedback-section button:hover {
+            background-color: #6a5a4d;
+        }
+
+        #msg {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+    </style>
+    <link rel="icon" href="/imgs\logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="Logo"> <!-- Add your logo image -->
+            <span>VIn Together</span>
+        </div>
+        <div class="navbar-links">
+            <a href="#">Home</a>
+            <a href="#about-us">About Us</a>
+            <a href="review.html">Feedback</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content-contr">
+
+        <!-- Header Section -->
+        <div class="header-container">
+            <div class="header-text">
+                <h1>Welcome Folks!</h1>
+                <p>Select a subject to start learning:</p>
+            </div>
+            <!-- <div class="feedback-button-container">
+                <a href="review.html" class="feedback-button">Give Feedback</a>
+            </div> -->
+        </div>
+
+        <!-- Available Courses Section (Cards) -->
+        <div class="subject-cards">
+            <div class="card">
+                <img src="imgs/Cao.jpg" alt="CAO Image">
+                <div class="card-content">
+                    <h3>CAO</h3>
+                    <p>Computer Architecture and Organization</p>
+                    <a href="Courses/CAO/module1/FUNCTIONAL COMPONENTS OF A COMPUTER.html" class="start-button">Start Learning</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imgs/DE.png" alt="Differential Image">
+                <div class="card-content">
+                    <h3>Differential</h3>
+                    <p>Differential Equations</p>
+                    <a href="Courses/differential/module1/Order and degree.html" class="start-button">Start Learning</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imgs/MPMC.png" alt="MPMC Image">
+                <div class="card-content">
+                    <h3>MPMC</h3>
+                    <p>Microprocessor and Microcontroller</p>
+                    <a href="Courses/MPMC/module1/Block Diagram & Architecture Of 8085 Microprocessor.html" class="start-button">Start Learning</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imgs/OOPS.png" alt="OOPS Image">
+                <div class="card-content">
+                    <h3>OOPS</h3>
+                    <p>Object-Oriented Programming</p>
+                    <a href="Courses/OOPS/module1/variables.html" class="start-button">Start Learning</a>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imgs/Toc.png" alt="TOC Image">
+                <div class="card-content">
+                    <h3>TOC</h3>
+                    <p>Theory of Computation</p>
+                    <a href="Courses/TOC/module1/proof-techniques.html" class="start-button">Start Learning</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- About Us Section -->
+        <section id="about-us" class="about-us-section">
+            <h2>About Us</h2>
+            <p>Welcome to VInTogether, a dedicated platform designed to empower B.Tech students with high-quality, curated learning resources. Our mission is to simplify your academic journey by providing access to the best educational content available on YouTube, paired with key takeaways, important points to remember, and potential exam questions for each topic.
+
+                Our team carefully selects and organizes content from trusted sources to ensure it aligns with your syllabus and academic goals. Whether you're preparing for exams, revising key concepts, or exploring challenging topics, we've got you covered.
+                
+                Currently, we're in the early stages of our journey, testing and refining the content for select parts of the syllabus. Your feedback is invaluable as we aim to create a resource that truly supports students like you. Together, let's make learning more accessible, effective, and enjoyable.
+                
+                Join us as we build a smarter way to succeed in your B.Tech studies!</p>
+        </section>
+
+        <!-- Feedback Preview Section -->
+        <div class="section feedback-section" id="feedback">
+            <h1>Your Feedback Matters</h1>
+            <p>We value your feedback to improve our content and services. Please let us know your thoughts below:</p>
+            <form name="submit-to-google-sheet" class="feedback-form">
+                <textarea id="feedback" name="Feedback" placeholder="Write your feedback here..." rows="4" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxghnMPtblnmloynKEAks9bpxYq3LmPg73gk8b6BTEZsABHGIKCrZTPIpE1dL1OEgTt/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Thank you for your feedback!";
+                    msg.style.color = "green";
+                    setTimeout(() => msg.innerHTML = "", 400);
+                    form.reset();
+                })
+                .catch(error => {
+                    msg.innerHTML = "An error occurred. Please try again.";
+                    msg.style.color = "red";
+                });
+        });
+    </script>
+</body>
+
+</html>

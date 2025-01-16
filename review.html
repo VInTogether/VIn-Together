@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback</title>
+    <link rel="icon" href="/imgs\logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #e6d9c3; /* Light brown background */
+            color: #333; /* Dark text color for readability */
+        }
+
+        .content-contr {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .sub-topic-div {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 2.2em;
+            color: #1a1a1a; /* Dark color for headings */
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.1em;
+            color: #666;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        label {
+            display: block;
+            font-size: 1.1em;
+            color: #333;
+            margin-bottom: 8px;
+            margin-top: 15px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #8b7765; /* Medium brown border */
+            border-radius: 6px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            box-sizing: border-box;
+            transition: border-color 0.3s ease;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #0066cc; /* Highlight with blue */
+            outline: none;
+        }
+
+        button {
+            background-color: #8b7765; /* Medium brown for the button */
+            color: white;
+            font-size: 1.3em;
+            padding: 15px;
+            width: 100%;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #6a5a4d; /* Darker brown on hover */
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        #msg {
+            text-align: center;
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        /* Responsive Design */
+        @media screen and (max-width: 768px) {
+            .sub-topic-div {
+                padding: 30px;
+                max-width: 90%;
+            }
+
+            h1 {
+                font-size: 1.9em;
+            }
+
+            label {
+                font-size: 1em;
+            }
+
+            input, textarea, button {
+                font-size: 1em;
+                padding: 10px;
+            }
+
+            button {
+                padding: 12px;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.6em;
+            }
+
+            label {
+                font-size: 0.9em;
+            }
+
+            input, textarea, button {
+                font-size: 0.9em;
+                padding: 8px;
+            }
+
+            button {
+                padding: 10px;
+            }
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #8b7765;
+            color: #fff;
+            text-decoration: none;
+            padding-right: 200px;
+        }
+
+        .navbar .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .navbar .logo img {
+            height: 40px;
+            margin-right: 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin-left: 20px;
+        }
+        .navbar ul li a {
+        text-decoration: none; /* Ensure the text is not underlined */
+        color: #fff;
+        font-size: 1em;
+        }
+
+        .navbar ul li a:hover {
+        text-decoration: none; /* Prevent underline on hover */
+        color: #ccc; /* Optional: Add a hover effect for color */
+        }
+
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 1em;
+            
+        }
+
+        .navbar .navbar-links {
+        display: flex;
+        gap: 20px;/* Spacing between links */
+         
+        }
+
+.navbar .navbar-links a {
+    text-decoration: none; /* Remove underline */
+    color: #fff;
+    font-size: 1em;
+    transition: color 0.3s; /* Smooth hover effect */
+}
+
+.navbar .navbar-links a:hover {
+    color: #ccc; /* Light gray on hover */
+}
+    </style>
+</head>
+<body>
+        <!-- Navbar -->
+        <nav class="navbar">
+            <div class="logo">
+                <img src="imgs/logo.png" alt="Logo"> <!-- Add your logo image -->
+                <span>VIn Together</span>
+            </div>
+            <div class="navbar-links">
+                <a href="index.html">Home</a>
+                <a href="index.html">About Us</a>
+                <a href="review.html">Feedback</a>
+            </div>
+        </nav>
+    <div class="content-contr">
+        <div class="sub-topic-div">
+            <h1>Your Feedback Matters</h1>
+            <p>We value your feedback to improve our content and services. Please let us know your thoughts below:</p>
+            <form name="submit-to-google-sheet" class="feedback-form">
+                
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="Feedback" placeholder="Write your feedback here..." rows="10" required></textarea>
+                
+                <button type="submit" class="review-button">Submit Feedback</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxghnMPtblnmloynKEAks9bpxYq3LmPg73gk8b6BTEZsABHGIKCrZTPIpE1dL1OEgTt/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Thank you for your feedback!";
+                    msg.style.color = "green";
+                    setTimeout(() => msg.innerHTML = "", 400);
+                    form.reset();
+                })
+                .catch(error => {
+                    msg.innerHTML = "An error occurred. Please try again.";
+                    msg.style.color = "red";
+                });
+        });
+    </script>
+</body>
+</html>
