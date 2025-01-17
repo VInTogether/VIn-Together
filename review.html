@@ -164,6 +164,9 @@
                 <a href="index.html">About Us</a>
                 <a href="review.html">Feedback</a>
             </div>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                &#9776; <!-- Hamburger icon -->
+            </div>
         </nav>
     <div class="content-contr">
         <div class="sub-topic-div">
@@ -204,6 +207,11 @@
                     msg.style.color = "red";
                 });
         });
+
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-links'); // Select the navbar-links
+            menu.classList.toggle('active'); // Toggle the active class to show/hide the links
+        }
     </script>
 </body>
 </html>
