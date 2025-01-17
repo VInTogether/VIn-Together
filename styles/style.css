@@ -35,7 +35,8 @@ body {
 }
 
 .navbar .navbar-links a {
-    margin-left: 20px;
+    /* margin-left: 20px; */
+    padding: 8px;
     color: white;
     font-size: 18px;
     text-decoration: none;
@@ -58,35 +59,50 @@ body {
     color: white;
 }
 
+/* Navbar Links (Initially displayed) */
+.navbar .navbar-links {
+    display: flex; /* By default, display the links inline */
+    justify-content: flex-end; /* Align the links to the right */
+}
+
 /* When the screen is less than 500px */
 @media (max-width: 500px) {
+    /* Navbar links hidden by default */
     .navbar .navbar-links {
-        display: none; /* Hide links by default */
+        display: none;
         flex-direction: column;
-        gap: 10px;
+        /* gap: 10px; */
         width: 100%;
         background-color: #4b3b2d;
         padding: 10px 0;
-        position: absolute;
-        top: 50px;
+        position: fixed; /* Position fixed to keep it within the viewport */
+        top: 50px; /* Adjust to position below navbar */
         left: 0;
         z-index: 999;
+        border-top: 1px solid #ddd; /* Optional: add a border for clarity */
     }
 
+    /* When the 'active' class is added, show the links */
     .navbar .navbar-links.active {
-        display: flex; /* Show the links when active */
+        display: flex;
+        left: 0;
     }
 
+    /* Show the hamburger icon when the screen width is less than 500px */
     .hamburger-menu {
-        display: block; /* Show the hamburger icon */
+        display: block;
     }
 
     .navbar .navbar-links a {
         font-size: 18px;
         color: white;
         text-align: center;
+        padding: 10px;
+        text-decoration: none;
+        border-bottom: 1px solid #ddd; /* Optional: add a border between links */
     }
 }
+
 
 .feedback-section {
     background-color: #e6d9c3;
