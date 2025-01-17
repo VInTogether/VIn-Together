@@ -16,6 +16,12 @@ body {
     padding: 10px 20px;
     color: white;
     font-size: larger;
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick it to the top of the page */
+    z-index: 1000; /* Ensure it stays on top of other content */
+    width: 100%; /* Ensure it spans the full width */
+    box-sizing: border-box; /* Prevent overflow from padding */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .navbar .logo {
@@ -46,15 +52,16 @@ body {
 
 .feedback-section {
     background-color: #e6d9c3;
-    padding: 40px 20px;
+    padding: 20px 20px;
     border-radius: 12px;
     max-width: 600px;
-    margin: 20px auto;
+    margin: 10px auto;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
 }
 
 .feedback-section h1 {
     text-align: center;
+    font-size: larger;
 }
 
 .feedback-section form {
@@ -77,6 +84,7 @@ body {
     border: none;
     border-radius: 6px;
     cursor: pointer;
+    justify-content: center;
 }
 
 .feedback-section button:hover {
@@ -87,6 +95,39 @@ body {
     text-align: center;
     font-size: 1.2em;
     margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #4b3b2d; /* Brown background */
+    padding: 5px 0; /* Adjust padding for height */
+    text-align: center;
+    width: 100%; /* Full width of the page */
+    position: sticky;
+    bottom: 0;
+    left: 0; /* Ensure it spans the entire width */
+    box-sizing: border-box; /* Prevent overflow */
+}
+
+.footer-content {
+    max-width: 1200px; /* Optional: Limiting content width */
+    margin: 0 auto;    /* Centering content */
+}
+
+.footer p {
+    /* margin: 5px 0; */
+    color: wheat;
+    font-size: 1rem;
+}
+
+.footer a {
+    color: white ; /* Orange color for the email link */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    text-decoration: underline;
 }
 
 /* Layout Containers */
@@ -220,7 +261,7 @@ iframe {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
     margin-top: 3rem;
-    margin-bottom: 7rem;
+    margin-bottom: 6rem;
 }
 
 .card {

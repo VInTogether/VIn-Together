@@ -20,6 +20,7 @@
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            margin-top: 20px;
             padding: 20px;
             box-sizing: border-box;
         }
@@ -146,6 +147,7 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            overflow-y: hidden;
         }
 
     </style>
@@ -177,6 +179,12 @@
             <span id="msg"></span>
         </div>
     </div>
+    <footer class="footer">
+        <div class="footer-content">
+            <!-- <p>&#169; 2025 VInTogether. All rights reserved.</p> -->
+            <p>Contact us at: <a href="mailto:vintogether.work@gmail.com">vintogether.work@gmail.com</a></p>
+        </div>
+    </footer>
     <script>
         const scriptURL = 'https://script.google.com/macros/s/AKfycbxghnMPtblnmloynKEAks9bpxYq3LmPg73gk8b6BTEZsABHGIKCrZTPIpE1dL1OEgTt/exec';
         const form = document.forms['submit-to-google-sheet'];
@@ -188,7 +196,7 @@
                 .then(response => {
                     msg.innerHTML = "Thank you for your feedback!";
                     msg.style.color = "green";
-                    setTimeout(() => msg.innerHTML = "", 400);
+                    setTimeout(() => msg.innerHTML = "", 2000);
                     form.reset();
                 })
                 .catch(error => {
