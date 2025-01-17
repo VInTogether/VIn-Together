@@ -50,6 +50,44 @@ body {
     padding: 20px;
 }
 
+/* Hamburger Menu (Hidden by default) */
+.hamburger-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+}
+
+/* When the screen is less than 500px */
+@media (max-width: 500px) {
+    .navbar .navbar-links {
+        display: none; /* Hide links by default */
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        background-color: #4b3b2d;
+        padding: 10px 0;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 999;
+    }
+
+    .navbar .navbar-links.active {
+        display: flex; /* Show the links when active */
+    }
+
+    .hamburger-menu {
+        display: block; /* Show the hamburger icon */
+    }
+
+    .navbar .navbar-links a {
+        font-size: 18px;
+        color: white;
+        text-align: center;
+    }
+}
+
 .feedback-section {
     background-color: #e6d9c3;
     padding: 20px 20px;

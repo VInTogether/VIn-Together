@@ -24,6 +24,9 @@
             <a href="#about-us">About Us</a>
             <a href="review.html">Feedback</a>
         </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
     </nav>
 
     <!-- Main Content -->
@@ -143,6 +146,11 @@
                     msg.style.color = "red";
                 });
         });
+
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-links');
+            menu.classList.toggle('active');
+        }
     </script>
 </body>
 
