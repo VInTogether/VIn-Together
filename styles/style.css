@@ -236,7 +236,7 @@ body {
 
 .content-contr {
     flex: 4;
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     background-color: #fffaf0;
     border: 1px solid #8b7765;
     border-radius: 0.5em;
