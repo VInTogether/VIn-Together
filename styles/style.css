@@ -102,6 +102,14 @@ body {
     border-bottom: 1px solid #ddd; /* Optional: add a border between links */
     }
     }
+
+    .header-text {
+        padding: 0px 60px;
+    }
+
+    #about-us {
+        padding: 0px 60px 36px 60px;
+    }
     
     
     .feedback-section {
@@ -314,8 +322,9 @@ body {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
-    margin-top: 3rem;
-    margin-bottom: 6rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 16px 60px;
     }
     
     .card {
@@ -367,7 +376,7 @@ body {
     transform: translateY(-5px);
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     }
-    
+
     /* Home Button */
     .tree-navbar {
     display: inline-block;
@@ -402,6 +411,10 @@ body {
     color: #f0a500;
     }
     
+    .navbar .navbar-links {
+        background-color: #3b3b3b;
+    }
+
     h1, a {
     color: #ffffff;
     }
@@ -533,6 +546,18 @@ body {
     .content-contr {
     flex: 1;
     padding: 10px;
+    }
+
+    .subject-cards {
+        padding: 0px 8px;
+    }
+
+    .header-text {
+        padding: 0px 8px;
+    }
+
+    #about-us {
+        padding: 0px 8px;
     }
     
     .videos-contr {
