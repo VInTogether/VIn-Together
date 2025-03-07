@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XRH5N6B8W4"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+    
+      gtag('config', 'G-XRH5N6B8W4');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIn Together - VIT Courses</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="icon" href="imgs/logo.png" type="image/x-icon">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="imgs/logo.png" alt="Logo"> <!-- Add your logo image -->
+            <span>VIn Together</span>
+        </div>
+        <div class="navbar-links">
+            <a href="#">Home</a>
+            <a href="#about-us">About Us</a>
+            <a href="review.html">Feedback</a>
+        </div>
+        <div class="hamburger-menu" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content-contr">
+
+        <!-- Header Section -->
+        <div class="header-container">
+            <div class="header-text">
+                <h1>Welcome Folks!</h1>
+                <p></p>
+            </div>
+        </div>
+
+        <!-- Message Section -->
+        <div class="message-container">
+            <h2>As part of our continuous development process, we've launched a new and improved site with enhanced features.</h2>
+            <p>Visit our new website to explore the upgraded experience: <a href="https://v-in-together.vercel.app" target="_blank">v-in-together.vercel.app</a></p>
+        </div>
+
+        <!-- About Us Section -->
+        <section id="about-us" class="about-us-section">
+            <h2>🌟 Introducing VInTogether - Your Ultimate B.Tech Learning Partner! 🌟</h2>
+            <p>Hey B.Tech Champs! 🚀🚀</p>
+            <p>Struggling to find the right content for your syllabus? Feeling lost with endless videos and notes? We've been there too, and that's why we created <strong>VInTogether</strong> - a platform made for students, by students.</p>
+
+            <h3>🎯 What's special about us?</h3>
+            <ul>
+                <li>✅ Curated YouTube videos with the best explanations for every topic.</li>
+                <li>✅ Key points to remember for exams.</li>
+                <li>✅ Possible questions to help you ace your tests.</li>
+            </ul>
+
+            <p>We're starting small, focusing on select topics, and we need your support and feedback to make it perfect for students like you. Together, let's build something amazing that makes learning easier, faster, and stress-free!</p>
+
+            <p>🌐 Check us out and be a part of the journey and contribute at GitHub: <a href="https://github.com/VInTogether/VIn-Together" target="_blank">https://github.com/VInTogether/VIn-Together</a></p>
+            <p>Let's learn, grow, and succeed <strong>VInTogether</strong>! 💪</p>
+
+            <p>📢 Share this with your friends and spread the word! 👫</p>
+        </section>
+
+        <!-- Feedback Preview Section -->
+        <div class="section feedback-section" id="feedback">
+            <h1>Your Feedback Matters</h1>
+            <p>We value your feedback to improve our content and services. Please let us know your thoughts below:</p>
+            <form name="submit-to-google-sheet" class="feedback-form">
+                <textarea id="feedback" name="Feedback" placeholder="Write your feedback here..." rows="4" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+            <span id="msg"></span>
+        </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>Contact us at: <a href="mailto:vintogether.work@gmail.com">vintogether.work@gmail.com</a></p>
+        </div>
+    </footer>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxghnMPtblnmloynKEAks9bpxYq3LmPg73gk8b6BTEZsABHGIKCrZTPIpE1dL1OEgTt/exec';
+        const form = document.forms['submit-to-google-sheet'];
+        const msg = document.getElementById("msg");
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Thank you for your feedback!";
+                    msg.style.color = "green";
+                    setTimeout(() => msg.innerHTML = "", 2000);
+                    form.reset();
+                })
+                .catch(error => {
+                    msg.innerHTML = "An error occurred. Please try again.";
+                    msg.style.color = "red";
+                });
+        });
+
+        function toggleMenu() {
+            const menu = document.querySelector('.navbar-links'); // Select the navbar-links
+            menu.classList.toggle('active'); // Toggle the active class to show/hide the links
+        }
+    </script>
+</body>
+
+</html>
